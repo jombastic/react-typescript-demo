@@ -8,11 +8,13 @@ import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 import Status from './components/Status';
-import Box from './components/state/Box';
+import Box from './components/context/Box';
 import Counter from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
-import ThemeContextProvider from './components/state/ThemeContext';
+import ThemeContextProvider from './components/context/ThemeContext';
 import User from './components/state/User';
+import UserContextComponent from './components/context/User';
+import UserContextProvider from './components/context/UserContext';
 
 function App() {
   const personName = {
@@ -59,9 +61,13 @@ function App() {
 
       {/* <Counter /> */}
 
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+
+      <UserContextProvider>
+        <UserContextComponent />
+      </UserContextProvider>
     </div>
   );
 }
