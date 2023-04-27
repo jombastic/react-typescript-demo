@@ -8,8 +8,10 @@ import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 import Status from './components/Status';
+import Box from './components/state/Box';
 import Counter from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
+import ThemeContextProvider from './components/state/ThemeContext';
 import User from './components/state/User';
 
 function App() {
@@ -55,7 +57,11 @@ function App() {
       {/* <LoggedIn />
       <User /> */}
 
-      <Counter />
+      {/* <Counter /> */}
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
