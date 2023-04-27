@@ -10,6 +10,7 @@ import PersonList from './components/PersonList';
 import Status from './components/Status';
 import Box from './components/context/Box';
 import Counter from './components/state/Counter';
+import CounterClass from './components/class/Counter';
 import LoggedIn from './components/state/LoggedIn';
 import ThemeContextProvider from './components/context/ThemeContext';
 import User from './components/state/User';
@@ -71,8 +72,10 @@ function App() {
         <UserContextComponent />
       </UserContextProvider> */}
 
-      <DomRef />
-      <MutableRef />
+      {/* <DomRef />
+      <MutableRef /> */}
+
+      <CounterClass message='The count value is' />
     </div>
   );
 }
