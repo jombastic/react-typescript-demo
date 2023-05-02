@@ -20,6 +20,7 @@ import DomRef from './components/ref/DomRef';
 import MutableRef from './components/ref/MutableRef';
 import Private from './components/auth/Private';
 import Profile from './components/auth/Profile';
+import List from './components/generics/List';
 
 function App() {
   const personName = {
@@ -79,7 +80,16 @@ function App() {
 
       {/* <CounterClass message='The count value is' /> */}
 
-      <Private isLoggedIn={true} component={Profile} />
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      <List
+        items={['Batman', 'Superman', 'Wonder Woman']}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
